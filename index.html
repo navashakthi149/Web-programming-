@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurelia Gallery - An exclusive fine art photography showcase featuring breathtaking nature, wildlife, travel, architecture, and portraiture.">
+  <meta name="keywords" content="photography, fine art gallery, nature photography, wildlife, architecture, portraiture, travel photography, lightbox">
+  <meta name="author" content="Julian Vance Fine Art Photography">
+  <title>AURELIA — Fine Art Photography Showcase</title>
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Elegance) & Plus Jakarta Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Aurelia Photography Home">
+        <span class="logo-mark">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+        </span>
+        <span class="brand-name">AURELIA <span class="brand-gold">STUDIO</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#exhibitions" class="nav-link">Exhibitions</a></li>
+          <li><a href="#contact" class="nav-link">Inquire</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button & Mobile Menu Toggle -->
+      <div class="header-actions">
+        <a href="#gallery" class="btn btn-outline-gold header-cta">Explore Works</a>
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#exhibitions" class="mobile-nav-link">Exhibitions</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Inquire</a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <a href="#contact" class="btn btn-gold w-full">Book Commission</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-backdrop" aria-hidden="true">
+        <div class="hero-gradient-overlay"></div>
+        <div class="hero-noise"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-icon">✦</span>
+          <span class="badge-text">2026 Fine Art Collection</span>
+        </div>
+
+        <h1 class="hero-title">
+          The Poetry of <br>
+          <span class="text-gold-gradient">Light & Shadow</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Capturing the fragile majesty of our world through the lens of Julian Vance. 
+          Eighteen masterworks spanning untamed wilderness, architectural wonders, and soul-stirring portraits.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#gallery" class="btn btn-gold btn-large" id="heroExploreBtn">
+            <span>Explore Gallery</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+          </a>
+          <a href="#about" class="btn btn-glass btn-large">
+            <span>The Artist's Vision</span>
+          </a>
+        </div>
+
+        <!-- Hero Stats Strip -->
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-value">18+</span>
+            <span class="stat-label">Featured Works</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-value">42</span>
+            <span class="stat-label">Countries Explored</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-value">15</span>
+            <span class="stat-label">Int'l Gold Medals</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Archival Quality</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#gallery" class="scroll-indicator" aria-label="Scroll to gallery section">
+        <span class="scroll-mouse">
+          <span class="scroll-wheel"></span>
+        </span>
+        <span class="scroll-text">DISCOVER</span>
+      </a>
+    </section>
+
+    <!-- Gallery Showcase Section -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-tag">CURATED PORTFOLIO</span>
+          <h2 class="section-title">Visual Narratives in <span class="text-gold">Focus</span></h2>
+          <p class="section-desc">
+            Filter through fine art categories or click any photograph to experience it in full resolution with detailed photographic metadata.
+          </p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <!-- Filter & Control Toolbar -->
+        <div class="gallery-toolbar">
+          <!-- Category Filters -->
+          <div class="category-filters" role="tablist" aria-label="Filter gallery by category">
+            <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true" id="filter-all">
+              All <span class="filter-count" id="count-all">(18)</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="nature" role="tab" aria-selected="false" id="filter-nature">
+              Nature <span class="filter-count" id="count-nature">(4)</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="wildlife" role="tab" aria-selected="false" id="filter-wildlife">
+              Wildlife <span class="filter-count" id="count-wildlife">(4)</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="travel" role="tab" aria-selected="false" id="filter-travel">
+              Travel <span class="filter-count" id="count-travel">(4)</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="architecture" role="tab" aria-selected="false" id="filter-architecture">
+              Architecture <span class="filter-count" id="count-architecture">(3)</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="portraits" role="tab" aria-selected="false" id="filter-portraits">
+              Portraits <span class="filter-count" id="count-portraits">(3)</span>
+            </button>
+          </div>
+
+          <!-- Secondary Toolbar: Search & Count readout -->
+          <div class="gallery-search-wrap">
+            <div class="search-input-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="gallerySearch" placeholder="Search title, location, camera..." aria-label="Search photographs">
+              <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Clear search query" style="display: none;">&times;</button>
+            </div>
+            <div class="gallery-counter-readout" id="galleryCounterReadout" aria-live="polite">
+              Showing <strong>18</strong> of 18 works
+            </div>
+          </div>
+        </div>
+
+        <!-- CSS Grid Gallery Container -->
+        <div class="gallery-grid" id="galleryGrid" aria-label="Photo gallery collection">
+          <!-- Photo items will be rendered and managed by script.js -->
+        </div>
+
+        <!-- Empty State (when search returns 0 items) -->
+        <div class="gallery-empty-state" id="galleryEmptyState" style="display: none;">
+          <div class="empty-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <h3>No photographs match your criteria</h3>
+          <p>Try searching for a different keyword or select another category filter.</p>
+          <button type="button" class="btn btn-outline-gold" id="resetFiltersBtn">Reset All Filters</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          
+          <!-- Image Column -->
+          <div class="about-image-wrapper">
+            <div class="about-frame">
+              <img 
+                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1000&q=80" 
+                alt="Julian Vance working in his studio with medium format camera" 
+                class="about-img"
+                loading="lazy"
+              >
+              <div class="about-image-badge">
+                <span class="badge-title">Julian Vance</span>
+                <span class="badge-subtitle">Master of Fine Art Photography</span>
+              </div>
+            </div>
+            <div class="about-experience-card">
+              <span class="exp-number">15+</span>
+              <span class="exp-text">Years of Artistic Mastery</span>
+            </div>
+          </div>
+
+          <!-- Content Column -->
+          <div class="about-content">
+            <span class="section-tag">THE ARTIST BEHIND THE LENS</span>
+            <h2 class="about-title">Translating Transient Light into <span class="text-gold">Timeless Art</span></h2>
+            
+            <p class="about-lead">
+              "Photography is not merely the recording of facts; it is the revelation of hidden rhythms, subtle emotions, and the profound silence between heartbeats."
+            </p>
+
+            <p class="about-body">
+              Born with an innate curiosity for wild landscapes and human expression, Julian Vance has spent over fifteen years traversing the globe from the freezing fjords of Norway to the golden dunes of Morocco. His work combines classic darkroom aesthetics with precision digital optics, yielding images with museum-grade tonal depth and painterly atmosphere.
+            </p>
+
+            <div class="gear-highlights">
+              <h3 class="gear-title">Signature Medium & Craft</h3>
+              <div class="gear-grid">
+                <div class="gear-item">
+                  <div class="gear-icon">📷</div>
+                  <div class="gear-info">
+                    <strong>Hasselblad H6D-100c & Sony A7R V</strong>
+                    <span>100MP Ultra-Definition Sensors</span>
+                  </div>
+                </div>
+                <div class="gear-item">
+                  <div class="gear-icon">🔭</div>
+                  <div class="gear-info">
+                    <strong>Prime Optics (24mm, 50mm, 85mm f/1.2)</strong>
+                    <span>Unmatched Micro-Contrast & Bokeh</span>
+                  </div>
+                </div>
+                <div class="gear-item">
+                  <div class="gear-icon">🖼️</div>
+                  <div class="gear-info">
+                    <strong>Hahnemühle FineArt Baryta Prints</strong>
+                    <span>Museum-Grade 100-Year Archival Life</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="#contact" class="btn btn-gold">Inquire for Private Commissions</a>
+              <a href="#gallery" class="btn btn-outline-gold">View Recent Prints</a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Exhibitions & Awards Section -->
+    <section class="exhibitions-section" id="exhibitions">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">GLOBAL RECOGNITION</span>
+          <h2 class="section-title">Honors & <span class="text-gold">Selected Exhibitions</span></h2>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="awards-grid">
+          <div class="award-card">
+            <span class="award-year">2025</span>
+            <h3 class="award-name">Sony World Photography Awards</h3>
+            <p class="award-desc">1st Place Winner — Landscape & Natural World category for "Celestial Aurora Borealis".</p>
+          </div>
+          <div class="award-card">
+            <span class="award-year">2024</span>
+            <h3 class="award-name">National Geographic Explorer Feature</h3>
+            <p class="award-desc">Cover feature and 12-page editorial on Arctic wildlife conservation.</p>
+          </div>
+          <div class="award-card">
+            <span class="award-year">2023</span>
+            <h3 class="award-name">Louvre Art Gallery, Paris</h3>
+            <p class="award-desc">Solo showcase "The Geometry of Space" exhibited in Salle des Glaces.</p>
+          </div>
+          <div class="award-card">
+            <span class="award-year">2022</span>
+            <h3 class="award-name">Hasselblad Masters Finalist</h3>
+            <p class="award-desc">Selected in the top 3 global architectural and fine art portrait finalists.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inquiry / Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-header text-center">
+            <span class="section-tag">ACQUISITION & INQUIRIES</span>
+            <h2 class="section-title">Bring Gallery Quality into <span class="text-gold">Your Space</span></h2>
+            <p class="contact-sub">
+              Limited edition signed prints, gallery representations, and editorial assignments available worldwide.
+            </p>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="userName">Your Full Name</label>
+                <input type="text" id="userName" name="name" required placeholder="e.g. Eleanor Vance">
+                <span class="field-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="userEmail">Email Address</label>
+                <input type="email" id="userEmail" name="email" required placeholder="e.g. eleanor@artcollector.com">
+                <span class="field-error" id="emailError"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="inquiryType">Inquiry Interest</label>
+                <select id="inquiryType" name="inquiry">
+                  <option value="limited-edition">Acquire Limited Edition Archival Print</option>
+                  <option value="commercial">Commercial / Editorial Commission</option>
+                  <option value="gallery">Gallery Exhibition / Curation</option>
+                  <option value="private">Private Portrait Session</option>
+                  <option value="other">Other Inquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="selectedPrint">Artwork Name (Optional)</label>
+                <input type="text" id="selectedPrint" name="artwork" placeholder="e.g. The Monarch's Gaze">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="selectedPrintSize">Selected Print Size & Edition</label>
+                <select id="selectedPrintSize" name="printSize">
+                  <option value="16x24">16" × 24" Collector Archival Print</option>
+                  <option value="24x36" selected>24" × 36" Gallery Edition (Collector's Choice)</option>
+                  <option value="40x60">40" × 60" Grand Museum Masterpiece</option>
+                  <option value="custom">Custom Architectural Scale / Commission</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="selectedFraming">Framing Preference</label>
+                <select id="selectedFraming" name="framing">
+                  <option value="shadowbox" selected>Museum Shadowbox Matte & Solid Oak Frame</option>
+                  <option value="floating">Floating Hardwood Frame</option>
+                  <option value="unframed">Unframed / Rolled in Heavy Archival Tube</option>
+                  <option value="acrylic">TruLife® Acrylic Face-Mount (No Frame)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="userMessage">Message & Project Scope</label>
+              <textarea id="userMessage" name="message" rows="4" required placeholder="Describe your interest, preferred print dimensions (24x36, 40x60), or exhibition timeline..."></textarea>
+              <span class="field-error" id="messageError"></span>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-gold btn-large w-full">
+                <span>Send Inquiry</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo footer-logo">
+            <span class="logo-mark">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+              </svg>
+            </span>
+            <span class="brand-name">AURELIA <span class="brand-gold">STUDIO</span></span>
+          </a>
+          <p class="footer-tagline">
+            Dedicated to the sublime interplay of natural light, raw emotion, and timeless storytelling. Exhibited globally.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Portfolio</h4>
+          <ul class="footer-list">
+            <li><a href="#gallery" class="footer-link" data-filter-link="nature">Nature & Wilds</a></li>
+            <li><a href="#gallery" class="footer-link" data-filter-link="wildlife">Wildlife Expeditions</a></li>
+            <li><a href="#gallery" class="footer-link" data-filter-link="travel">World Travel</a></li>
+            <li><a href="#gallery" class="footer-link" data-filter-link="architecture">Architecture</a></li>
+            <li><a href="#gallery" class="footer-link" data-filter-link="portraits">Fine Portraits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-list">
+            <li><a href="#hero" class="footer-link">Home Showcase</a></li>
+            <li><a href="#gallery" class="footer-link">Full Gallery</a></li>
+            <li><a href="#about" class="footer-link">About The Artist</a></li>
+            <li><a href="#exhibitions" class="footer-link">Awards & Honors</a></li>
+            <li><a href="#contact" class="footer-link">Commission & Prints</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Connect & Follow</h4>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow on Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://500px.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="View on 500px">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 8v8M8 12h8"></path>
+              </svg>
+            </a>
+            <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Browse on Unsplash">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 4h10v6H7zM3 13h5v7h8v-7h5v10H3z"></path>
+              </svg>
+            </a>
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Portfolio on Behance">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h6a3 3 0 0 1 0 6H3zM3 14h7a3.5 3.5 0 0 1 0 7H3z"></path>
+                <path d="M14 13h7a3.5 3.5 0 0 0-7 0v2a3.5 3.5 0 0 0 7 0"></path>
+                <line x1="15" y1="8" x2="20" y2="8"></line>
+              </svg>
+            </a>
+          </div>
+          <p class="footer-contact-info">
+            Studio: Zürich, Switzerland<br>
+            Direct: inquiries@aureliaphoto.com
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 Aurelia Fine Art Gallery. All rights reserved. Photographs protected by international copyright law.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#hero">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       FUNCTIONAL LIGHTBOX COMPONENT
+       ============================================== -->
+  <div class="lightbox" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image Preview">
+    <!-- Backdrop Blur -->
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+
+    <div class="lightbox-container">
+      
+      <!-- Top Control Bar -->
+      <div class="lightbox-header">
+        <div class="lightbox-info-top">
+          <span class="lightbox-badge" id="lightboxCategory">NATURE</span>
+          <span class="lightbox-counter" id="lightboxCounter">01 / 18</span>
+        </div>
+
+        <div class="lightbox-actions">
+          <!-- Like button in lightbox -->
+          <button type="button" class="lightbox-btn" id="lightboxLikeBtn" aria-label="Like this photo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="heart-icon">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span id="lightboxLikeCount">142</span>
+          </button>
+
+          <!-- Zoom Toggle Button -->
+          <button type="button" class="lightbox-btn" id="lightboxZoomBtn" aria-label="Toggle Zoom">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </button>
+
+          <!-- Inquire about this print -->
+          <button type="button" class="lightbox-btn btn-inquire-quick" id="lightboxInquireBtn" aria-label="Inquire about this print">
+            Inquire Print
+          </button>
+
+          <!-- Close button -->
+          <button type="button" class="lightbox-btn btn-close" id="lightboxCloseBtn" aria-label="Close Lightbox (Esc)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Stage with Image and Nav Controls -->
+      <div class="lightbox-stage">
+        <!-- Previous Button -->
+        <button type="button" class="lightbox-nav-btn prev" id="lightboxPrevBtn" aria-label="Previous Photo (Left Arrow)">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <!-- Image Wrapper -->
+        <div class="lightbox-media-wrapper" id="lightboxMediaWrapper">
+          <div class="lightbox-loading-spinner" id="lightboxSpinner" aria-hidden="true"></div>
+          <img src="" alt="" class="lightbox-image" id="lightboxImage">
+        </div>
+
+        <!-- Next Button -->
+        <button type="button" class="lightbox-nav-btn next" id="lightboxNextBtn" aria-label="Next Photo (Right Arrow)">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Bottom Exhibition & Story Panel -->
+      <div class="lightbox-footer" id="lightboxFooter">
+        
+        <!-- Header row of the footer with Title, Price tag, and Tab Navigation -->
+        <div class="lightbox-footer-header">
+          <div class="lightbox-title-meta">
+            <div class="lightbox-title-row">
+              <h3 class="lightbox-title" id="lightboxTitle">Whispers of the Misty Pines</h3>
+              <div class="lightbox-pricing-chip" id="lightboxPriceChip">From $450</div>
+              <div class="lightbox-edition-chip" id="lightboxEditionChip">Edition of 25 (6 remaining)</div>
+            </div>
+            <div class="lightbox-location-sub">
+              <div class="lightbox-location" id="lightboxLocation">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span id="lightboxLocationText">Banff, Alberta, Canada</span>
+              </div>
+              <span class="lightbox-sub-divider">•</span>
+              <p class="lightbox-desc" id="lightboxDesc">Alpine mist drifting through evergreen valleys.</p>
+            </div>
+          </div>
+
+          <!-- Tabs Switcher -->
+          <div class="lightbox-tabs-nav" role="tablist" aria-label="Photo details tabs">
+            <button type="button" class="lightbox-tab-btn active" data-tab="story" role="tab" aria-selected="true" id="tabBtnStory">
+              <span class="tab-icon">✦</span>
+              <span>The Story</span>
+            </button>
+            <button type="button" class="lightbox-tab-btn" data-tab="prints" role="tab" aria-selected="false" id="tabBtnPrints">
+              <span class="tab-icon">🏷️</span>
+              <span>Sizes & Pricing</span>
+            </button>
+            <button type="button" class="lightbox-tab-btn" data-tab="exif" role="tab" aria-selected="false" id="tabBtnExif">
+              <span class="tab-icon">⚙️</span>
+              <span>Camera Gear</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab Content Panes -->
+        <div class="lightbox-tab-contents">
+          
+          <!-- TAB 1: THE STORY BEHIND THE SHOT -->
+          <div class="lightbox-tab-pane active" id="paneStory" role="tabpanel" aria-labelledby="tabBtnStory">
+            <div class="story-container">
+              <blockquote class="story-quote" id="lightboxStoryQuote">
+                "The forest breathes when humanity is still asleep."
+              </blockquote>
+              <div class="story-body" id="lightboxStoryBody">
+                <!-- Story text injected via JS -->
+              </div>
+              <div class="expedition-chips" id="lightboxExpeditionChips">
+                <!-- Expedition conditions chips injected via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: PRINT SIZES & PRICING SELECTOR -->
+          <div class="lightbox-tab-pane" id="panePrints" role="tabpanel" aria-labelledby="tabBtnPrints">
+            <div class="prints-selector-container">
+              <div class="prints-header-note">
+                <span class="prints-cert-badge">✦ Museum Archival Standard</span>
+                <span class="prints-cert-desc">Each fine art print is individually hand-signed, numbered, and accompanied by a serialized Certificate of Authenticity.</span>
+              </div>
+
+              <!-- Size Option Pills -->
+              <div class="prints-size-grid" id="lightboxSizeOptions">
+                <!-- Size pills injected via JS -->
+              </div>
+
+              <!-- Selected Size Specifications & Acquisition CTA -->
+              <div class="selected-print-card" id="selectedPrintCard">
+                <div class="print-card-details">
+                  <div class="print-detail-item">
+                    <span class="print-detail-label">Fine Art Medium</span>
+                    <strong class="print-detail-val" id="activePrintMedium">Hahnemühle Photo Rag 308gsm Archival Pigment</strong>
+                  </div>
+                  <div class="print-detail-item">
+                    <span class="print-detail-label">Framing & Display</span>
+                    <strong class="print-detail-val" id="activePrintFraming">Museum Shadowbox Matte Included</strong>
+                  </div>
+                  <div class="print-detail-item">
+                    <span class="print-detail-label">Edition Exclusivity</span>
+                    <strong class="print-detail-val text-gold" id="activePrintEdition">Strictly Limited to 25 Worldwide</strong>
+                  </div>
+                </div>
+
+                <div class="print-card-action">
+                  <div class="print-price-wrapper">
+                    <span class="print-price-label">Acquisition Price</span>
+                    <span class="active-print-price" id="activePrintPrice">$850 USD</span>
+                  </div>
+                  <button type="button" class="btn btn-gold btn-acquire-edition" id="btnAcquireEdition">
+                    <span>Acquire This Print</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: CAMERA GEAR & TECHNICAL EXIF -->
+          <div class="lightbox-tab-pane" id="paneExif" role="tabpanel" aria-labelledby="tabBtnExif">
+            <div class="lightbox-exif-grid">
+              <div class="exif-card">
+                <span class="exif-card-icon">📷</span>
+                <span class="exif-card-label">Camera Body</span>
+                <strong class="exif-card-value" id="lightboxCamera">Sony Alpha 7R V</strong>
+              </div>
+              <div class="exif-card">
+                <span class="exif-card-icon">🔭</span>
+                <span class="exif-card-label">Prime / Optical Lens</span>
+                <strong class="exif-card-value" id="lightboxLens">FE 24-70mm F2.8 GM II</strong>
+              </div>
+              <div class="exif-card">
+                <span class="exif-card-icon">⚙️</span>
+                <span class="exif-card-label">Exposure Settings</span>
+                <strong class="exif-card-value" id="lightboxSettings">1/320s • f/5.6 • ISO 100</strong>
+              </div>
+              <div class="exif-card">
+                <span class="exif-card-icon">📍</span>
+                <span class="exif-card-label">Location</span>
+                <strong class="exif-card-value" id="lightboxLocationExif">Banff National Park, Canada</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Thumbnail Strip for fast navigation -->
+      <div class="lightbox-thumbnail-bar" id="lightboxThumbnailBar" aria-label="Photo thumbnails">
+        <!-- Injected via JS based on active filtered list -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification element -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Main JavaScript Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
